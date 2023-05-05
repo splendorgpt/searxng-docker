@@ -35,7 +35,10 @@ services:
 
   searxng:
     container_name: searxng
-    image: searxng/searxng:latest
+    # image: searxng/searxng:latest
+    build:
+      context: ../searxng
+      dockerfile: Dockerfile
     networks:
       - searxng
     ports:
